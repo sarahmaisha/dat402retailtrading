@@ -1,0 +1,25 @@
+column,type,description
+trader_id,string,Unique trader id
+age,int,Trader age
+prior_experience_years,float,Years of prior trading experience
+starting_capital,float,CIRCUMSTANCE: starting account size (USD)
+account_age_months,int,How long the account has been active (months)
+instrument,string,Primary instrument: stocks / etf / forex / crypto / options / futures
+market_regime,string,CIRCUMSTANCE/LUCK: dominant regime during the window (bull/choppy/bear)
+broker_cost_bps,float,CIRCUMSTANCE: round-trip broker cost in bps — the silent killer
+risk_per_trade_pct,float,BEHAVIOUR: % of account risked per trade
+avg_leverage,float,BEHAVIOUR: average leverage used
+trades_per_month,int,BEHAVIOUR: trading frequency (overtrading proxy)
+uses_stop_loss,int,BEHAVIOUR: 1 if consistently uses stop-losses
+avg_win_hold_days,float,BEHAVIOUR: average holding time for winners
+avg_loss_hold_days,float,BEHAVIOUR: average holding time for losers (disposition effect if > winners)
+diversification,float,BEHAVIOUR: portfolio diversification (0-10)
+journals_trades,int,"BEHAVIOUR: journaling habit (0 none, 1 sometimes, 2 daily)"
+revenge_trading,float,BEHAVIOUR: tendency to chase losses (0-10)
+overconfidence,float,BEHAVIOUR: overconfidence (0-10)
+follows_plan,float,BEHAVIOUR: sticks to a trading plan (0-10)
+chases_volatility,float,BEHAVIOUR: chases high-volatility instruments (0-10)
+position_sizing_discipline,float,BEHAVIOUR: position-sizing discipline (0-10)
+net_return_pct,float,TARGET (continuous): net return over the window (%)
+profitable,int,1 if net return > 0 (~18% of traders)
+blew_up,int,TARGET (binary): 1 if lost >=70% of the account
